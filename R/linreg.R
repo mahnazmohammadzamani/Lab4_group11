@@ -7,7 +7,6 @@
 #' @export linreg
 #' @import ggplot2
 #' @import cowplot
-#' @importFrom model.matrix
 #' @references \url{http://staff.www.ltu.se/~jove/courses/c0002m/least_squares.pdf}
 #' @examples 
 #' mod_object <- linreg(Petal.Length~Species, data = iris)
