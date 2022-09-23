@@ -1,0 +1,23 @@
+Package: Lab4
+Type: Package
+Title: lab4
+Version: 4.2.1
+Date: 2022-09-19
+Author: person("mahnaz", "Mohammadzamani", email = "mahnaz.mzamani@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: Bita Tarfiee <b.tarfiee@gmail.com>
+Description: linreg 
+License: GPL-2
+RoxygenNote: 7.2.1
+Encoding: UTF-8
+language: r
+LazyData: true
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+exports: linreg
+Imports: ggplot2 , cowplot
+Depends: R (>= 3.5)
+VignetteBuilder: knitr
