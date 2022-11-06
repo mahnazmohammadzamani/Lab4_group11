@@ -59,16 +59,19 @@ linreg <- function(formula,data){
   
 }
 
+
+
 #' @name print
 #' @param obj data
 #' @author Mahnaz , Bita
 #' @description Implementing print
 #' @title print
-#' @export
 # print 
+#' @export
 print <- function (obj) {
   UseMethod("print")
 }
+#' @exportS3Method
 print.linreg <- function(obj){
   cat("Call:\n")
   print(obj$call)
@@ -82,33 +85,33 @@ print.linreg <- function(obj){
 #' @author Mahnaz , Bita
 #' @description Implementing resid
 #' @title resid
-#' @export
 # resid
+#' @export
 resid <- function (obj) {
   UseMethod("resid")
 }
+#' @exportS3Method
 resid.linreg <- function(obj){
   return(obj$residuals)
   
 }
-
 
 #' @name pred
 #' @param obj data
 #' @author Mahnaz , Bita
 #' @description Implementing pred
 #' @title pred
-#' @export
 
+#' @export
 # pred 
 pred <- function (obj) {
   UseMethod("pred")
 }
+#' @exportS3Method
 pred.linreg <- function(obj){
   return(obj$fitted_values)
   
 }
-
 
 #' @name coef
 #' @param obj data
@@ -120,6 +123,7 @@ pred.linreg <- function(obj){
 coef <- function (obj) {
   UseMethod("coef")
 }
+#' @exportS3Method
 coef.linreg <- function(obj){
   return(obj$coefficients)
 }
@@ -131,11 +135,12 @@ coef.linreg <- function(obj){
 #' @author Mahnaz , Bita
 #' @description Implementing summary
 #' @title summary
-#' @export
 # summary 
+#' @export
 summary <- function (obj) {
   UseMethod("summary")
 }
+#' @exportS3Method
 summary.linreg <- function(obj)
 {
   p_val <- function(p_value) {
@@ -163,15 +168,18 @@ summary.linreg <- function(obj)
   cat("\nResidual standard error:" , sqrt(obj$rv) ,"on", obj$degree_freedom ,"degrees of freedom")
 }
 
+
 #' @name plot
-#' @param obj data
+#' @param object data
 #' @author Mahnaz , Bita
 #' @description Implementing plot
 #' @title plot
+# plot
 #' @export
-plot <- function (obj) {
+plot <- function (object) {
   UseMethod("plot")
 }
+#' @exportS3Method
 plot.linreg <- function(object) {
   
   std <- sqrt(abs(object$residuals))

@@ -4,10 +4,10 @@
 \alias{plot}
 \title{plot}
 \usage{
-plot(obj)
+plot(object)
 }
 \arguments{
-\item{obj}{data}
+\item{object}{data}
 }
 \description{
 Implementing plot
