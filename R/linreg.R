@@ -71,7 +71,7 @@ linreg <- function(formula,data){
 print <- function (obj) {
   UseMethod("print")
 }
-#' @exportS3Method
+#' @export
 print.linreg <- function(obj){
   cat("Call:\n")
   print(obj$call)
@@ -90,7 +90,7 @@ print.linreg <- function(obj){
 resid <- function (obj) {
   UseMethod("resid")
 }
-#' @exportS3Method
+#' @export
 resid.linreg <- function(obj){
   return(obj$residuals)
   
@@ -107,7 +107,7 @@ resid.linreg <- function(obj){
 pred <- function (obj) {
   UseMethod("pred")
 }
-#' @exportS3Method
+#' @export
 pred.linreg <- function(obj){
   return(obj$fitted_values)
   
@@ -123,7 +123,7 @@ pred.linreg <- function(obj){
 coef <- function (obj) {
   UseMethod("coef")
 }
-#' @exportS3Method
+#' @export
 coef.linreg <- function(obj){
   return(obj$coefficients)
 }
@@ -140,7 +140,7 @@ coef.linreg <- function(obj){
 summary <- function (obj) {
   UseMethod("summary")
 }
-#' @exportS3Method
+#' @export
 summary.linreg <- function(obj)
 {
   p_val <- function(p_value) {
@@ -179,7 +179,7 @@ summary.linreg <- function(obj)
 plot <- function (object) {
   UseMethod("plot")
 }
-#' @exportS3Method
+#' @export
 plot.linreg <- function(object) {
   
   std <- sqrt(abs(object$residuals))
