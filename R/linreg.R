@@ -8,7 +8,10 @@
 #' @import ggplot2
 #' @import cowplot
 #' @references \url{http://staff.www.ltu.se/~jove/courses/c0002m/least_squares.pdf}
-
+#' @examples
+#' data(iris)
+#' mod_object <- linreg(formula = Petal.Length ~ Species, data = iris)
+#' print(mod_object)
 
 linreg <- function(formula,data){
   col_names <- c(names(data))

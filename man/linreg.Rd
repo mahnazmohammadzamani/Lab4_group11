@@ -14,6 +14,11 @@ linreg(formula, data)
 \description{
 Implementing Linear Regression
 }
+\examples{
+data(iris)
+mod_object <- linreg(formula = Petal.Length ~ Species, data = iris)
+print(mod_object)
+}
 \references{
 \url{http://staff.www.ltu.se/~jove/courses/c0002m/least_squares.pdf}
 }
