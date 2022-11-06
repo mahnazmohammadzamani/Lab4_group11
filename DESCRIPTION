@@ -17,7 +17,6 @@ Suggests:
     knitr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-exports: linreg
 Imports: ggplot2 , cowplot
 Depends: R (>= 3.5)
 VignetteBuilder: knitr
